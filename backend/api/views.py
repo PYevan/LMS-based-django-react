@@ -55,26 +55,26 @@ class PasswordResetEmailVerifyAPIView(generics.RetrieveAPIView):
 
             link = f"http://localhost:5173/create-new-password/?otp={user.otp}&uuidb64={uuidb64}&refresh_token={refresh_token}"
 
-            # context = {
-            #     "link": link,
-            #     "username": user.username
-            # }
-            #
-            # subject = "Password Rest Email"
-            # text_body = render_to_string("email/password_reset.txt", context)
-            # html_body = render_to_string("email/password_reset.html", context)
-            #
-            # msg = EmailMultiAlternatives(
-            #     subject=subject,
-            #     from_email=settings.FROM_EMAIL,
-            #     to=[user.email],
-            #     body=text_body
-            # )
-            #
-            # msg.attach_alternative(html_body, "text/html")
-            # msg.send()
-            #
-            # print("link ======", link)
+            context = {
+                "link": link,
+                "username": user.username
+            }
+
+            subject = "Password Rest Email"
+            text_body = render_to_string("email/password_reset.txt", context)
+            html_body = render_to_string("email/password_reset.html", context)
+
+            msg = EmailMultiAlternatives(
+                subject=subject,
+                from_email=settings.FROM_EMAIL,
+                to=[user.email],
+                body=text_body
+            )
+
+            msg.attach_alternative(html_body, "text/html")
+            msg.send()
+
+            print("link ======", link)
         return user
 
 
