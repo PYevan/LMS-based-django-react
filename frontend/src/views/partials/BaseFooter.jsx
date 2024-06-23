@@ -8,11 +8,10 @@ function BaseFooter() {
           <div className="col-lg-4 col-md-6 col-12 text-white">
             {/* about company */}
             <div className="mb-4">
-              <h1>Desphixs</h1>
+              <h1>EvanLIAN</h1>
               <div className="mt-4">
                 <p>
-                  Desphixs is feature-rich components and beautifully Bootstrap UIKit
-                  for developers, built with bootstrap responsive framework.
+                  Evan is a nice boy from China, he likes computer and making friends.
                 </p>
                 {/* social media */}
                 <div className="fs-4 mt-4">
