@@ -16,7 +16,7 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { // this is the function that will be called when the form is submitted
     e.preventDefault();
     setIsLoading(true);
 
